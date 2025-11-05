@@ -3,7 +3,7 @@ cds_job
 
 This
 [single header file](https://github.com/nothings/stb/blob/master/docs/other_libs.md)
-C++11 library provides a lock-free, work-stealing job queue system. It is based on
+C++11 library provides a lock-free, work-stealing job queue system, by [Cort Stratton](https://codeberg.org/cdwfs). It is based on
 an implementation described extensively by [Stefan Reinalter](http://www.molecular-matters.com/) on
 his [blog](https://blog.molecular-matters.com/tag/job-system/).
 
@@ -33,6 +33,19 @@ No documentation yet, but here's a list of things to keep in mind:
 	inappropriate in production code. The original author suggests various approaches to put workers to sleep when there's no work left,
 	and wake them again when more is ready.
 
+Installation
+------------
+
+Run:
+```bash
+$ npm i cds_job.c
+```
+
+And then include `cds_job.h` as follows:
+```c
+#include "node_modules/cds_job.c/cds_job.h"
+```
+
 Key Features / Design Goals
 ---------------------------
 - **Identical API on all supported platforms**. The following
@@ -56,3 +69,10 @@ Acknowledgements
 ----------------
 - [Sean Barrett](http://nothings.org/): master of single-header C libraries.
 - [Stefan Reinalter](https://blog.molecular-matters.com/tag/job-system/): author of the Molecule Engine.
+
+<br>
+<br>
+
+
+[![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/cds_job.c)
